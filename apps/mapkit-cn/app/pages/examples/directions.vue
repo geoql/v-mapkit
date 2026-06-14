@@ -13,7 +13,7 @@ useSeoMeta({
     'Directions example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
   twitterCard: 'summary_large_image',
 });
-defineOgImageComponent('MapkitDoc', {
+defineOgImage('MapkitDoc', {
   title: 'Directions',
   description: 'Directions example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
 });

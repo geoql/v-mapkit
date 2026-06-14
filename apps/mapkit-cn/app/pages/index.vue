@@ -14,7 +14,7 @@
       'Beautiful Apple MapKit components for Vue. Built on v-mapkit, styled with Tailwind CSS, works with shadcn-vue.',
     twitterCard: 'summary_large_image',
   });
-  defineOgImageComponent('MapkitDoc', {
+  defineOgImage('MapkitDoc', {
     title: 'mapkit-cn',
     description: 'Beautiful Apple MapKit components for Vue.',
   });

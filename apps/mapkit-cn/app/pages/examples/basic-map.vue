@@ -12,7 +12,7 @@
       'Basic Map example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
     twitterCard: 'summary_large_image',
   });
-  defineOgImageComponent('MapkitDoc', {
+  defineOgImage('MapkitDoc', {
     title: 'Basic Map',
     description: 'Basic Map example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
   });

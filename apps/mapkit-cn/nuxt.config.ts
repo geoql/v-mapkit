@@ -97,6 +97,11 @@ export default defineNuxtConfig({
     // Generate all OG images at build time; skip per-request cache storage
     // during prerender to reduce the Cloudflare Pages worker bundle.
     runtimeCacheStorage: false,
+    // Canonical OG size (1.91:1); overrides the module's 1200x600 default.
+    defaults: {
+      width: 1200,
+      height: 630,
+    },
   },
 
   vite: {

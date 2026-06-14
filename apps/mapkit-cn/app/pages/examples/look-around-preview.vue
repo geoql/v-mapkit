@@ -19,7 +19,7 @@
       'Look Around Preview example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
     twitterCard: 'summary_large_image',
   });
-  defineOgImageComponent('MapkitDoc', {
+  defineOgImage('MapkitDoc', {
     title: 'Look Around Preview',
     description: 'Look Around Preview example for v-mapkit: a live, copy-paste Vue 3 Apple MapKit demo.',
   });

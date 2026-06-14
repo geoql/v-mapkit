@@ -57,7 +57,7 @@
     return segment ? segment.replace(/-/g, ' ') : 'Docs';
   });
 
-  defineOgImageComponent('MapkitDocs', {
+  defineOgImage('MapkitDocs', {
     title: page.value?.title ?? 'v-mapkit',
     description: page.value?.description ?? 'Vue 3 components for Apple MapKit JS.',
     category: ogCategory.value,

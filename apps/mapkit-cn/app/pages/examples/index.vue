@@ -11,7 +11,7 @@
       'Browse live, copy-paste examples for every v-mapkit component: annotations, overlays, controls, and Apple MapKit services.',
     twitterCard: 'summary_large_image',
   });
-  defineOgImageComponent('MapkitDoc', {
+  defineOgImage('MapkitDoc', {
     title: 'Examples',
     description: 'Browse live, copy-paste examples for every v-mapkit component: annotations, overlays, controls, and Apple MapKit services.',
   });

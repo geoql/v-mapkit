@@ -10,7 +10,7 @@
     path: '/',
   });
 
-  defineOgImageComponent('MapkitDocs', {
+  defineOgImage('MapkitDocs', {
     title: 'Apple Maps, the Vue way.',
     description: 'Declarative Vue 3 components for Apple MapKit JS.',
   });
