@@ -89,6 +89,17 @@ apps/docs/
 7. **Dependency versions via catalog.** `package.json` references `catalog:app:docs` / `catalog:default` — versions live in `pnpm-workspace.yaml`. Never hard-code.
 8. **postinstall runs `nuxt prepare`.** Requires `enable-pre-post-scripts=true` in `.npmrc`.
 9. **Composables are kebab-case files.** Name composable files `use-x.ts` (e.g. `use-docs-navigation.ts`), exports stay camelCase (`useDocsNavigation`). This matches the reference docs apps (tileserver-rs/geolith) and the library — and is the **opposite** of the sibling `apps/mapkit-cn`, whose composables are camelCase files. Do not drift back to camelCase here.
+10. **OG images are 1200x630 and validated with the `nuxt-seo` MCP.** Pages set their card via `defineOgImage('MapkitDocs', { title, description, category? })` (NOT the deprecated `defineOgImageComponent`). The canonical size is pinned in `nuxt.config.ts` under `ogImage.defaults` (1.91:1 — overrides the module's 1200x600 default). After any OG change, validate with the `nuxt-seo` MCP — `debug_social_share` for the full tag set + `og:image` dimensions, `check_meta_tags` for completeness. A rendered PNG existing is NOT proof: confirm the parsed `og:image.width/height` is `1200x630` and there are no missing-tag warnings (e.g. `og:url`).
+
+## Validating OG / Social Cards (nuxt-seo MCP)
+
+Use the `nuxt-seo` MCP to validate social cards on a live or preview URL — do not rely on "the PNG renders" alone. Suggested flow for any page (e.g. after a deploy):
+
+1. `debug_social_share({ url })` → check `ogImages[].width/height` is `1200x630`, the title/description match the page, and `warnings` is empty (watch for `Missing og:url`).
+2. `check_meta_tags({ url })` → confirm `twitter:card=summary_large_image` and both `og:image` + `twitter:image` are present.
+3. If a dimension is wrong, fix `ogImage.defaults` in `nuxt.config.ts`; if a tag is missing, fix `usePageSeo` / the page head.
+
+Both `apps/docs` and `apps/mapkit-cn` share this contract (same 1200x630 size, same `defineOgImage` API).
 
 ## Commands
 
