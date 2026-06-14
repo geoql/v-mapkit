@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Pencil, CircleDot, ArrowLeft, ArrowRight, FileText } from 'lucide-vue-next';
+  import { Pencil, CircleDot, ArrowLeft, ArrowRight, FileText } from '@lucide/vue';
   import type { NavItem } from '~/types';
 
   defineProps<{

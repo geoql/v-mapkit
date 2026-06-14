@@ -19,7 +19,6 @@
     "@vueuse/nuxt": "catalog:app:mapkit-cn",
     "class-variance-authority": "catalog:app:mapkit-cn",
     "clsx": "catalog:app:mapkit-cn",
-    "lucide-vue-next": "catalog:app:mapkit-cn",
     "nuxt": "catalog:default",
     "reka-ui": "catalog:app:mapkit-cn",
     "shiki": "catalog:app:mapkit-cn",

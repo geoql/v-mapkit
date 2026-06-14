@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Map } from 'lucide-vue-next';
+  import { Map } from '@lucide/vue';
 
   const year = new Date().getFullYear();
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Github, Map, Menu, Moon, Sun, X } from 'lucide-vue-next';
+  import { Map, Menu, Moon, Sun, X } from '@lucide/vue';
 
   const { sidebarOpen, toggleSidebar } = useDocsNavigation();
   const { isDark, toggle: toggleTheme } = useThemeToggle();
@@ -51,7 +51,7 @@
           class="flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           aria-label="GitHub repository"
         >
-          <Github class="size-[18px]" />
+          <Icon name="simple-icons:github" class="size-[18px]" />
         </a>
         <ClientOnly>
           <button

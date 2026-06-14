@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ArrowRight, Github, Layers, Map, Eye, Search, Boxes, Code2 } from 'lucide-vue-next';
+  import { ArrowRight, Layers, Map, Eye, Search, Boxes, Code2 } from '@lucide/vue';
 
   definePageMeta({ layout: false });
 
@@ -68,7 +68,7 @@
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-2xs transition-colors hover:bg-accent"
             >
-              <Github class="size-4" />
+              <Icon name="simple-icons:github" class="size-4" />
               Live examples
             </a>
           </div>

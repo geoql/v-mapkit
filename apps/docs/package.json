@@ -12,15 +12,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@lucide/vue": "catalog:app:docs",
     "@nuxt/content": "catalog:app:docs",
+    "@nuxt/icon": "catalog:app:docs",
     "@nuxtjs/color-mode": "catalog:app:docs",
-    "@resvg/resvg-js": "^2.6.2",
     "@vueuse/core": "catalog:app:docs",
     "@vueuse/nuxt": "catalog:app:docs",
     "better-sqlite3": "catalog:app:docs",
     "class-variance-authority": "catalog:app:docs",
     "clsx": "catalog:app:docs",
-    "lucide-vue-next": "catalog:app:docs",
     "nuxt": "catalog:default",
     "reka-ui": "catalog:app:docs",
     "tailwind-merge": "catalog:app:docs",
@@ -28,6 +28,7 @@
     "tw-animate-css": "catalog:app:docs"
   },
   "devDependencies": {
+    "@iconify-json/simple-icons": "catalog:app:docs",
     "@nuxt/fonts": "catalog:app:docs",
     "@nuxtjs/plausible": "catalog:default",
     "@nuxtjs/tailwindcss": "catalog:app:docs",

@@ -2,6 +2,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/content',
     'shadcn-nuxt',
     '@vueuse/nuxt',
