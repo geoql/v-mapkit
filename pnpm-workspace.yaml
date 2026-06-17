@@ -30,11 +30,11 @@ catalogs:
     # Shared by both apps
     "@nuxtjs/plausible": ^3.0.2
     nuxt: ^4.4.8
-    wrangler: ^4.100.0
+    wrangler: ^4.101.0
 
   app:docs:
     "@iconify-json/simple-icons": ^1.2.86
-    "@lucide/vue": ^1.18.0
+    "@lucide/vue": ^1.20.0
     "@nuxt/content": ^3.14.0
     "@nuxt/fonts": ^0.14.0
     "@nuxt/icon": ^2.2.3
@@ -43,11 +43,11 @@ catalogs:
     "@resvg/resvg-wasm": ^2.6.2
     "@vueuse/core": ^14.3.0
     "@vueuse/nuxt": ^14.3.0
-    better-sqlite3: ^12.10.0
+    better-sqlite3: ^12.11.1
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
     nuxt-og-image: ^6.6.0
-    oxlint: ^1.69.0
+    oxlint: ^1.70.0
     reka-ui: ^2.9.10
     satori: ^0.26.0
     shadcn-nuxt: ^2.7.4
@@ -60,7 +60,7 @@ catalogs:
     vue-tsc: ^3.3.5
 
   app:mapkit-cn:
-    "@iconify-json/lucide": ^1.2.112
+    "@iconify-json/lucide": ^1.2.113
     "@iconify-json/simple-icons": ^1.2.86
     "@nuxt/eslint": ^1.16.0
     "@nuxt/eslint-config": ^1.16.0
