@@ -64,7 +64,7 @@
     "bump-version": "node scripts/bump-jsr-version.mjs"
   },
   "devDependencies": {
-    "@tsdown/css": "^0.22.2",
+    "@tsdown/css": "^0.22.3",
     "@types/apple-mapkit-js-browser": "^5.78.1",
     "@types/node": "^25.9.3",
     "@vitest/coverage-v8": "^4.1.9",
