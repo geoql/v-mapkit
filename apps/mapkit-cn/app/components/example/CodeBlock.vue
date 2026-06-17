@@ -52,12 +52,12 @@
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div
       v-if="highlighted"
-      class="shiki-block overflow-x-auto px-4 py-4 text-[0.8125rem] leading-relaxed"
+      class="shiki-block overflow-x-auto p-4 text-[0.8125rem] leading-relaxed"
       v-html="highlighted"
     ></div>
     <pre
       v-else
-      class="overflow-x-auto px-4 py-4 text-[0.8125rem] leading-relaxed"
+      class="overflow-x-auto p-4 text-[0.8125rem] leading-relaxed"
     ><code class="font-mono text-foreground/90">{{ trimmed }}</code></pre>
   </figure>
 </template>

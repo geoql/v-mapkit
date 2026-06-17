@@ -9,12 +9,12 @@
 <template>
   <NuxtLink
     :to="`/examples/${example.slug}`"
-    class="group relative flex flex-col gap-3 rounded-xl border border-border bg-card p-5 transition-all duration-200 ease-[cubic-bezier(0.28,0.11,0.32,1)] hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    class="group relative flex flex-col gap-3 rounded-xl border border-border bg-card p-5 transition-all duration-200 ease-apple hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
   >
     <span
       class="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-200 group-hover:bg-primary group-hover:text-primary-foreground"
     >
-      <Icon :name="example.icon" class="size-[18px]" />
+      <Icon :name="example.icon" class="size-4.5" />
     </span>
 
     <div class="space-y-1">

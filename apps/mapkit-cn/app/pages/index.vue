@@ -79,9 +79,10 @@
 </script>
 
 <template>
-  <!-- ───────────────────────── Hero ───────────────────────── -->
-  <section
-    class="container grid min-h-[calc(100dvh-3rem)] items-center gap-12 py-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-0"
+  <div>
+    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <section
+      class="container grid min-h-[calc(100dvh-3rem)] items-center gap-12 py-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-0"
   >
     <!-- Copy -->
     <div class="flex flex-col items-start gap-7">
@@ -91,14 +92,14 @@
       </Badge>
 
       <h1
-        class="text-balance text-5xl font-bold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl"
+        class="text-balance text-5xl font-bold leading-[1.02] tracking-tighter sm:text-6xl lg:text-7xl"
       >
         Beautiful Apple<br />
         Maps for <span class="text-primary">Vue.</span>
       </h1>
 
       <p
-        class="max-w-md text-balance text-lg font-light leading-relaxed text-muted-foreground sm:text-xl"
+        class="max-w-md text-balance text-lg/relaxed font-light text-muted-foreground sm:text-xl"
       >
         Theme-aware MapKit JS components for Vue 3. Drop them in, style them
         with Tailwind, ship them with shadcn-vue.
@@ -136,7 +137,7 @@
 
     <!-- Live map: the product showing itself -->
     <div
-      class="relative h-[24rem] w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg sm:h-[30rem] lg:h-[34rem]"
+      class="relative h-96 w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg sm:h-120 lg:h-136"
     >
       <ClientOnly>
         <template v-if="token">
@@ -211,7 +212,7 @@
             <p class="text-base font-semibold tracking-tight text-foreground">
               {{ item.id }}
             </p>
-            <p class="text-sm leading-relaxed text-muted-foreground">
+            <p class="text-sm/relaxed text-muted-foreground">
               {{ item.label }}
             </p>
           </div>
@@ -254,4 +255,5 @@
       <ExampleCodeBlock :code="quickStart" filename="App.vue" />
     </div>
   </section>
+  </div>
 </template>

@@ -28,12 +28,12 @@
         {{ total }} examples
       </Badge>
       <h1
-        class="text-balance text-4xl font-bold tracking-[-0.03em] sm:text-5xl"
+        class="text-balance text-4xl font-bold tracking-tighter sm:text-5xl"
       >
         Examples
       </h1>
       <p
-        class="max-w-xl text-balance text-lg font-light leading-relaxed text-muted-foreground"
+        class="max-w-xl text-balance text-lg/relaxed font-light text-muted-foreground"
       >
         Every v-mapkit component and composable, demonstrated with live maps
         and copy-paste source. Set your MapKit token once and explore.

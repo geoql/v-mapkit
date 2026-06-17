@@ -3,6 +3,7 @@ import libraryPkg from '../../packages/v-mapkit/package.json' with { type: 'json
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/color-mode',
+    '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/fonts',
     'shadcn-nuxt',

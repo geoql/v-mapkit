@@ -10,6 +10,7 @@ allowBuilds:
   esbuild: true
   node-liblzma: true
   sharp: true
+  unrs-resolver: true
   vue-demi: true
   workerd: true
 
@@ -61,6 +62,8 @@ catalogs:
   app:mapkit-cn:
     "@iconify-json/lucide": ^1.2.112
     "@iconify-json/simple-icons": ^1.2.86
+    "@nuxt/eslint": ^1.16.0
+    "@nuxt/eslint-config": ^1.16.0
     "@nuxt/fonts": ^0.14.0
     "@nuxt/icon": ^2.2.3
     "@nuxtjs/color-mode": ^4.0.1
@@ -72,7 +75,11 @@ catalogs:
     "@vueuse/nuxt": ^14.3.0
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
+    eslint: ^10.5.0
+    eslint-plugin-better-tailwindcss: ^4.6.0
+    eslint-plugin-oxlint: ^1.70.0
     nuxt-og-image: ^6.6.0
+    oxlint: ^1.70.0
     reka-ui: ^2.9.10
     satori: ^0.26.0
     shadcn-nuxt: ^2.7.4

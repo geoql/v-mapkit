@@ -70,19 +70,19 @@
         >
           <VAnnotationCallout>
             <div
-              class="w-56 space-y-2 rounded-xl bg-white p-4 text-left shadow-xl"
+              class="w-56 space-y-2 rounded-xl bg-popover p-4 text-left shadow-xl"
             >
-              <h3 class="text-sm font-semibold text-neutral-900">
+              <h3 class="text-sm font-semibold text-foreground">
                 Apple Park
               </h3>
-              <p class="text-xs leading-relaxed text-neutral-500">
+              <p class="text-xs/relaxed text-muted-foreground">
                 One Apple Park Way, Cupertino, CA 95014
               </p>
               <a
                 href="https://maps.apple.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-1 text-xs font-medium text-[#0a84ff]"
+                class="inline-flex items-center gap-1 text-xs font-medium text-primary"
               >
                 Directions
                 <span aria-hidden="true">→</span>

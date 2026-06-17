@@ -11,6 +11,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
+    "lint": "oxlint && eslint .",
+    "lint:fix": "oxlint --fix && eslint . --fix",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -29,6 +31,8 @@
   "devDependencies": {
     "@iconify-json/lucide": "catalog:app:mapkit-cn",
     "@iconify-json/simple-icons": "catalog:app:mapkit-cn",
+    "@nuxt/eslint": "catalog:app:mapkit-cn",
+    "@nuxt/eslint-config": "catalog:app:mapkit-cn",
     "@nuxt/fonts": "catalog:app:mapkit-cn",
     "@nuxt/icon": "catalog:app:mapkit-cn",
     "@nuxtjs/color-mode": "catalog:app:mapkit-cn",
@@ -36,7 +40,11 @@
     "@nuxtjs/tailwindcss": "catalog:app:mapkit-cn",
     "@resvg/resvg-wasm": "catalog:app:mapkit-cn",
     "@tailwindcss/typography": "catalog:app:mapkit-cn",
+    "eslint": "catalog:app:mapkit-cn",
+    "eslint-plugin-better-tailwindcss": "catalog:app:mapkit-cn",
+    "eslint-plugin-oxlint": "catalog:app:mapkit-cn",
     "nuxt-og-image": "catalog:app:mapkit-cn",
+    "oxlint": "catalog:app:mapkit-cn",
     "satori": "catalog:app:mapkit-cn",
     "shadcn-nuxt": "catalog:app:mapkit-cn",
     "tailwindcss": "catalog:app:mapkit-cn",

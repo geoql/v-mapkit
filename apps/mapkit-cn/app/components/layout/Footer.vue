@@ -48,12 +48,12 @@
             class="flex items-center gap-2 text-foreground"
             aria-label="mapkit-cn home"
           >
-            <Icon name="lucide:map" class="size-[18px] text-primary" />
+            <Icon name="lucide:map" class="size-4.5 text-primary" />
             <span class="text-[0.9375rem] font-semibold tracking-tight">
               mapkit<span class="text-muted-foreground">-cn</span>
             </span>
           </NuxtLink>
-          <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">
+          <p class="max-w-xs text-sm/relaxed text-muted-foreground">
             Beautiful Apple MapKit components for Vue 3. Copy, style, ship.
           </p>
         </div>

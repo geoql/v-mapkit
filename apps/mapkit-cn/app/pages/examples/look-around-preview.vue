@@ -91,7 +91,7 @@
       </ExampleMapContainer>
 
       <div
-        class="relative h-[22rem] w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm"
+        class="relative h-88 w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm"
       >
         <ClientOnly>
           <div v-if="place" class="absolute inset-0">

@@ -78,15 +78,15 @@
         />
         <VControlLegend position="bottom-right">
           <div
-            class="space-y-1.5 rounded-lg bg-white/90 p-3 text-left shadow-md backdrop-blur"
+            class="space-y-1.5 rounded-lg bg-popover/90 p-3 text-left shadow-md backdrop-blur"
           >
-            <p class="text-[0.6875rem] font-semibold uppercase tracking-wide text-neutral-500">
+            <p class="text-[0.6875rem] font-semibold uppercase tracking-wide text-muted-foreground">
               Legend
             </p>
             <div
               v-for="item in legend"
               :key="item.label"
-              class="flex items-center gap-2 text-xs text-neutral-700"
+              class="flex items-center gap-2 text-xs text-foreground"
             >
               <span
                 class="size-2.5 rounded-full"

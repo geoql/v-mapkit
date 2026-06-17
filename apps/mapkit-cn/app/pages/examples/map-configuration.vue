@@ -109,11 +109,11 @@
             v-for="color in tints"
             :key="color"
             type="button"
-            class="size-7 rounded-full border-2 transition-transform hover:scale-110"
+            class="size-7 rounded-full border-2 transition-colors"
             :class="
               tintColor === color
                 ? 'border-foreground'
-                : 'border-transparent'
+                : 'border-transparent hover:border-border'
             "
             :style="colorStyle(color)"
             :aria-label="color"
