@@ -23,10 +23,10 @@
 
 <template>
   <figure
-    class="group/code overflow-hidden rounded-xl border border-border bg-card"
+    class="group/code flex flex-col overflow-hidden rounded-xl border border-border bg-card lg:h-full lg:min-h-0"
   >
     <figcaption
-      class="flex items-center justify-between border-b border-border/70 bg-secondary/40 px-4 py-2"
+      class="flex shrink-0 items-center justify-between border-b border-border/70 bg-secondary/40 px-4 py-2"
     >
       <span
         class="flex items-center gap-2 font-mono text-xs text-muted-foreground"
@@ -49,15 +49,16 @@
       </button>
     </figcaption>
 
-    <!-- eslint-disable-next-line vue/no-v-html -->
+    <!-- eslint-disable vue/no-v-html -- Shiki returns trusted, prerendered HTML -->
     <div
       v-if="highlighted"
-      class="shiki-block overflow-x-auto p-4 text-[0.8125rem] leading-relaxed"
+      class="shiki-block overflow-auto p-4 text-[0.8125rem] leading-relaxed lg:min-h-0 lg:flex-1"
       v-html="highlighted"
     ></div>
+    <!-- eslint-enable vue/no-v-html -->
     <pre
       v-else
-      class="overflow-x-auto p-4 text-[0.8125rem] leading-relaxed"
+      class="overflow-auto p-4 text-[0.8125rem] leading-relaxed lg:min-h-0 lg:flex-1"
     ><code class="font-mono text-foreground/90">{{ trimmed }}</code></pre>
   </figure>
 </template>

@@ -6,8 +6,8 @@
 </script>
 
 <template>
-  <section class="space-y-5">
-    <header class="space-y-1.5">
+  <section class="flex flex-col gap-5 lg:min-h-0 lg:flex-1">
+    <header class="shrink-0 space-y-1.5">
       <h2 class="text-2xl font-semibold tracking-tight text-foreground">
         {{ title }}
       </h2>
@@ -16,17 +16,18 @@
       </p>
     </header>
 
-    <!-- Live demo -->
-    <slot></slot>
+    <!-- Live demo + source snippet side by side on desktop, stacked on mobile -->
+    <div class="grid gap-5 lg:min-h-0 lg:flex-1 lg:grid-cols-2">
+      <div class="grid gap-4 lg:min-h-0 lg:grid-rows-[1fr_auto]">
+        <slot></slot>
+        <div v-if="$slots.controls">
+          <slot name="controls"></slot>
+        </div>
+      </div>
 
-    <!-- Optional controls strip (sliders, toggles, inputs). -->
-    <div v-if="$slots.controls">
-      <slot name="controls"></slot>
-    </div>
-
-    <!-- Source snippet -->
-    <div v-if="$slots.code" class="pt-1">
-      <slot name="code"></slot>
+      <div v-if="$slots.code" class="lg:min-h-0">
+        <slot name="code"></slot>
+      </div>
     </div>
   </section>
 </template>

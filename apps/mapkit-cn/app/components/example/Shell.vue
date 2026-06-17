@@ -68,7 +68,9 @@
       </Button>
     </header>
 
-    <div class="flex-1 px-4 py-8 lg:px-8 lg:py-10">
+    <div
+      class="flex flex-1 flex-col px-4 py-6 lg:min-h-0 lg:overflow-hidden lg:p-8"
+    >
       <slot></slot>
     </div>
   </SidebarInset>

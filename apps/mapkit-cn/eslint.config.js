@@ -39,6 +39,9 @@ export default createConfigForNuxt({
     files: ['app/components/ui/**/*.vue'],
     rules: {
       'better-tailwindcss/enforce-canonical-classes': 'off',
+      // Upstream shadcn-vue primitives don't set defaults on class/variant props
+      // (they're all optional). Fixing them would diverge from clean re-vendoring.
+      'vue/require-default-prop': 'off',
     },
   })
   .append(...oxlint.configs['flat/recommended'])

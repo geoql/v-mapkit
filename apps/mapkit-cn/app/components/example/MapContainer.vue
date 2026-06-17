@@ -5,7 +5,7 @@
       height?: string;
     }>(),
     {
-      height: 'h-[28rem]',
+      height: 'h-[28rem] lg:h-full',
     },
   );
 
