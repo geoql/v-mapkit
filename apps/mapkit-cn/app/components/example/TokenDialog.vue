@@ -1,12 +1,11 @@
 <script setup lang="ts">
-  import {
-    PopoverContent,
-    PopoverPortal,
-    PopoverRoot,
-    PopoverTrigger,
-  } from 'reka-ui';
   import { Button } from '@/components/ui/button';
   import { Input } from '@/components/ui/input';
+  import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } from '@/components/ui/popover';
 
   const { token, hasToken, setToken, clearToken } = useMapkitToken();
 
@@ -29,7 +28,7 @@
 </script>
 
 <template>
-  <PopoverRoot v-model:open="open">
+  <Popover v-model:open="open">
     <PopoverTrigger as-child>
       <Button :variant="hasToken ? 'outline' : 'default'" size="sm">
         <Icon
@@ -40,12 +39,11 @@
       </Button>
     </PopoverTrigger>
 
-    <PopoverPortal>
-      <PopoverContent
-        :side-offset="8"
-        align="center"
-        class="z-100 w-80 rounded-xl border border-border bg-popover p-4 text-left shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
-      >
+    <PopoverContent
+      :side-offset="8"
+      align="center"
+      class="w-80 rounded-xl text-left"
+    >
         <div class="mb-3 space-y-1">
           <h3 class="text-sm font-semibold text-foreground">
             Apple MapKit JS token
@@ -84,6 +82,5 @@
           </div>
         </div>
       </PopoverContent>
-    </PopoverPortal>
-  </PopoverRoot>
+  </Popover>
 </template>

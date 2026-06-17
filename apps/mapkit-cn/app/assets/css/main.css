@@ -253,6 +253,37 @@ canvas {
   @apply w-full h-full overflow-hidden;
 }
 
+/* ─── Sidebar (shadcn-vue offcanvas) ─── */
+
+/* Offcanvas sidebar overlays content, never pushes it. */
+[data-slot='sidebar'][data-state='expanded'] > div:first-child {
+  width: 0 !important;
+}
+
+/* Sidebar panel sits above the backdrop overlay. */
+[data-slot='sidebar'] > div:last-child {
+  z-index: 50 !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s var(--ease-apple);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* ─── Prose light-mode fix ───
    Tailwind v4 typography plugin uses @media (prefers-color-scheme: dark)
    to set --tw-prose-* vars directly on .prose elements. On a dark-mode OS
