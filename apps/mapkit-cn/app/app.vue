@@ -13,6 +13,8 @@
 
   useSeoMeta({
     ogUrl: () => canonical.value,
+    ogType: 'website',
+    ogSiteName: () => siteConfig.name,
   });
 </script>
 
