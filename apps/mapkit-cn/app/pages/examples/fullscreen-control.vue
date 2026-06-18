@@ -35,7 +35,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Fullscreen Control"
     description="VControlFullscreen adds a button that expands the map to fill the viewport via the Fullscreen API. Drop it anywhere inside VMap and position it in any corner. Click the ⛶ button on the map."
   >
@@ -45,8 +46,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="FullscreenControl.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

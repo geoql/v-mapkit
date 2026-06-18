@@ -75,12 +75,15 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Look Around Preview"
     description="VLookAroundPreview shows a static, tappable Look Around thumbnail: perfect for cards and list items. Search a landmark and the preview updates. Tapping it opens the full interactive view."
   >
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <ExampleMapContainer height="h-[22rem]">
+    <div
+      class="grid size-full grid-cols-1 grid-rows-2 gap-px bg-border lg:grid-cols-2 lg:grid-rows-1"
+    >
+      <ExampleMapContainer>
         <VMap :access-token="token" color-scheme="dark" @map="onMap">
           <VMarkerAnnotation
             v-if="marker"
@@ -90,9 +93,7 @@
         </VMap>
       </ExampleMapContainer>
 
-      <div
-        class="relative h-88 w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm"
-      >
+      <div class="relative min-h-0 overflow-hidden bg-card">
         <ClientOnly>
           <div v-if="place" class="absolute inset-0">
             <VLookAroundPreview :place="place as never" />
@@ -114,8 +115,5 @@
       </form>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="LookAroundPreview.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

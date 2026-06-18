@@ -48,7 +48,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Layer Switcher"
     description="VControlLayerSwitcher renders a dropdown bound to the map's type. Provide your own list of map types and labels, or rely on the sensible defaults. Use the selector on the map."
   >
@@ -58,8 +59,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="LayerSwitcher.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

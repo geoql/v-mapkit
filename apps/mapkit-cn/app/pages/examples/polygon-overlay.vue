@@ -63,7 +63,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Polygon Overlay"
     description="VPolygonOverlay fills a closed ring of coordinates: neighborhoods, delivery zones, coverage areas. Pass an array of [lat, lng] points and a style object."
   >
@@ -73,8 +74,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="PolygonOverlay.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

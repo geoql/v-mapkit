@@ -61,7 +61,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Map Types"
     description="MapKit ships four base styles. Set map.mapType on the live instance to switch between Standard, Muted, Hybrid, and Satellite. The map instance is exposed through a template ref."
   >
@@ -88,8 +89,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="MapTypes.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

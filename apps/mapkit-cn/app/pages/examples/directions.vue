@@ -85,7 +85,8 @@ const code = `<script setup lang="ts">
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Directions"
     description="useDirections wraps MapKit routing. Pass an origin and destination to get routes with distance and travel time, then draw the route geometry with a polyline overlay."
   >
@@ -123,8 +124,5 @@ const code = `<script setup lang="ts">
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="Directions.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

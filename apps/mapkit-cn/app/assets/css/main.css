@@ -275,6 +275,17 @@ canvas {
   opacity: 0;
 }
 
+/* Gradient fade: dissolve scroll-rail content into the background at top/bottom. */
+.gradient-fade-both {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

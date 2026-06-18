@@ -71,7 +71,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Clustering"
     description="Give annotations a shared clustering-identifier and MapKit groups nearby pins automatically. The cluster-annotation prop on VMap controls how each group renders. Zoom in to split clusters apart."
   >
@@ -92,8 +93,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="Clustering.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

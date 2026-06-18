@@ -57,7 +57,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Property Toggles"
     description="VMap exposes the full set of MapKit chrome as reactive props. Flip the switches below and watch the compass, zoom control, scale, and other UI appear or disappear live."
   >
@@ -92,8 +93,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="PropertyToggles.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

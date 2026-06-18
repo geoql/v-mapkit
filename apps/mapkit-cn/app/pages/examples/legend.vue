@@ -64,7 +64,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Legend"
     description="VControlLegend positions a panel over the map and renders whatever you put in its slot. Use it to explain marker colors, overlay meaning, or data sources."
   >
@@ -99,8 +100,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="Legend.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

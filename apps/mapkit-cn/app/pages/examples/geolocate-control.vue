@@ -55,7 +55,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Geolocate Control"
     description="VControlGeolocate centers the map on the visitor's location using the browser Geolocation API. It emits locate with the position and error if permission is denied. Set track-user-location to follow movement."
   >
@@ -78,8 +79,5 @@
       </p>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="GeolocateControl.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

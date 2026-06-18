@@ -66,7 +66,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Place Annotation"
     description="VPlaceAnnotation builds an annotation from a real MapKit Place: the rich result type returned by search, geocoding, and POI queries. Search below and the results drop onto the map as place pins."
   >
@@ -105,8 +106,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="PlaceAnnotation.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

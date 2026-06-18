@@ -78,7 +78,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Search"
     description="useSearch wraps MapKit's search service with promise-based autocomplete and search methods. Type to get live suggestions, then pick one to drop results on the map."
   >
@@ -137,8 +138,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="Search.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

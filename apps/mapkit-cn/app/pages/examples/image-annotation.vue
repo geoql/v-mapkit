@@ -68,7 +68,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Image Annotation"
     description="VImageAnnotation swaps the default pin for your own artwork. The url field maps device pixel ratios to image variants, so markers stay crisp on retina displays. Here we use inline SVG data-URIs."
   >
@@ -83,8 +84,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="ImageAnnotation.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

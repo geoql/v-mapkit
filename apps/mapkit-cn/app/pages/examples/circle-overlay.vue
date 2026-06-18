@@ -55,7 +55,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Circle Overlay"
     description="VCircleOverlay draws a geographic circle from a center coordinate and a radius in meters: ideal for service ranges, geofences, and proximity bubbles. Adjust the radius below."
   >
@@ -85,8 +86,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="CircleOverlay.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

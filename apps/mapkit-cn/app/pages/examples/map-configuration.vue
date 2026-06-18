@@ -51,7 +51,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Map Configuration"
     description="VMap exposes reactive configuration props that update the live map in place: color scheme, distance units, edge padding, and tint color for selected controls. Tweak them below."
   >
@@ -136,8 +137,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="MapConfiguration.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

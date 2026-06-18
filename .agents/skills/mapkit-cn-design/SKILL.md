@@ -130,6 +130,55 @@ Homepage hero MUST:
 
 ---
 
+## Rule #11 — Example-Page Layout (full-bleed map + content rail)
+
+Example detail pages (`/examples/*`) use the **full-bleed map + docs content rail** pattern — the map is the hero, not a boxed card. This is the structural pattern from the sibling `mapcn-vue`, worn in our Apple token contract (same "structure from reference, visuals from this app" split the docs site uses). It REPLACES the old centered two-equal-rounded-boxes layout, which was bland and produced mismatched box heights.
+
+### Structure
+
+The page renders a single `<ComponentDemo>` (top-level component) that fills the viewport:
+
+- **Shell**: `flex h-dvh flex-col overflow-hidden lg:flex-row` — no top header bar; chrome lives in the rail (desktop) and the mobile peek-bar.
+- **Desktop content rail** (`hidden lg:flex lg:w-[22rem] xl:w-[24rem]`, right hairline border): scrollable — sidebar trigger + `← Examples` breadcrumb, title (`text-2xl font-semibold`), then `<ExampleDocs>` (description + collapsible `View code` + `Installation` tabs), and a sticky-footer `<ExampleNavigation>` (Edit/Report + prev/next pager).
+- **Full-bleed map** (`flex-1`): the default slot fills edge-to-edge (no radius, no border). `<ExampleMapContainer>` fills its parent (`size-full`), it does NOT draw a rounded card anymore.
+- **Floating controls**: the `#controls` slot renders as an **Apple-glass panel** floating over the map (`absolute top-3`, `backdrop-blur-chrome`, `bg-background/80`, `rounded-xl`, hairline border) — NOT below the map.
+- **Mobile + tablet** (`< lg`): the rail is hidden; `<ExampleMapInfoSheet>` is a bottom peek-bar (`h-12`, sidebar trigger + "Details" + title) that opens a bottom `Sheet` carrying the same `<ExampleDocs>` + nav. **Tablet (768–1024) uses the mobile pattern**, not the desktop rail.
+
+### Component inventory (all under the 100-line rule)
+
+| File                                            | Owns                                                                        |
+| ----------------------------------------------- | --------------------------------------------------------------------------- |
+| `app/components/ComponentDemo.vue`              | The full-bleed shell (rail + map + floating controls + peek-bar)            |
+| `app/components/example/ExampleDocs.vue`        | Shared rail/sheet body (description + code + install) — DRYs desktop/mobile |
+| `app/components/example/CodePanel.vue`          | Collapsible "View code" Shiki block                                         |
+| `app/components/example/PackageManagerTabs.vue` | npm/pnpm/yarn/bun install tabs (`registry` prop → shadcn-vue add cmd)       |
+| `app/components/example/ExampleNavigation.vue`  | Edit/Report links + prev/next pager (from `lib/examples.ts`)                |
+| `app/components/example/MapInfoSheet.vue`       | Mobile/tablet bottom peek-bar → `Sheet`                                     |
+
+### Example page contract
+
+```vue
+<template>
+  <ComponentDemo :code="code" title="Basic Map" description="…" registry="v-map">
+    <ExampleMapContainer>
+      <VMap :access-token="token" :color-scheme="scheme" @map="onMap" />
+    </ExampleMapContainer>
+
+    <!-- optional: floats over the map as an Apple-glass panel -->
+    <template #controls> … </template>
+  </ComponentDemo>
+</template>
+```
+
+The source snippet is passed as the `:code` **prop** (string), not a `#code` slot. There is no top-level "View source" button — Edit/Report live in the nav.
+
+### Hard rules for this layout
+
+- **No horizontal scroll at ANY breakpoint** (320 / 360 / 390 / 768 / 834 / 1440), light AND dark. Map full-bleed must not push past the viewport; floating controls cap at `max-w` and stay within the map.
+- **Smoke-test every example on mobile, tablet, AND desktop** before declaring done — the rail/peek-bar swap at `lg` is the highest-risk seam.
+
+---
+
 ## When to Refuse
 
 If a future request asks for any of:
@@ -146,18 +195,20 @@ If a future request asks for any of:
 
 ## File Inventory (where the design lives)
 
-| File                                      | Owns                                               |
-| ----------------------------------------- | -------------------------------------------------- |
-| `app/assets/css/main.css`                 | All tokens, weight rules, base typography, shadows |
-| `app/pages/index.vue`                     | Homepage hero — the canonical surface              |
-| `app/components/layout/Header.vue`        | Floating glass header (blur + hairline border)     |
-| `app/components/layout/Footer.vue`        | Footer                                             |
-| `app/components/example/ExampleCard.vue`  | Example gallery card primitive                     |
-| `app/components/example/GalleryCard.vue`  | Gallery card                                       |
-| `app/components/example/MapContainer.vue` | Per-example live map frame                         |
-| `app/components/example/CodeBlock.vue`    | Mono code sample block                             |
-| `app/components/ui/*`                     | shadcn-vue primitives (Button, Card, Badge, Input) |
-| `nuxt.config.ts`                          | `@nuxt/fonts` config (Geist + Geist Mono)          |
+| File                                           | Owns                                               |
+| ---------------------------------------------- | -------------------------------------------------- |
+| `app/assets/css/main.css`                      | All tokens, weight rules, base typography, shadows |
+| `app/pages/index.vue`                          | Homepage hero — the canonical surface              |
+| `app/components/layout/Header.vue`             | Floating glass header (blur + hairline border)     |
+| `app/components/layout/Footer.vue`             | Footer                                             |
+| `app/components/ComponentDemo.vue`             | Example-page shell (full-bleed map + content rail) |
+| `app/components/example/GalleryCard.vue`       | Gallery card                                       |
+| `app/components/example/MapContainer.vue`      | Per-example live map frame (full-bleed fill)       |
+| `app/components/example/ExampleDocs.vue`       | Shared rail/sheet body (desc + code + install)     |
+| `app/components/example/MapInfoSheet.vue`      | Mobile/tablet bottom peek-bar → Sheet              |
+| `app/components/example/ExampleNavigation.vue` | Edit/Report + prev/next pager                      |
+| `app/components/ui/*`                          | shadcn-vue primitives (Button, Card, Badge, Input) |
+| `nuxt.config.ts`                               | `@nuxt/fonts` config (Geist + Geist Mono)          |
 
 ---
 

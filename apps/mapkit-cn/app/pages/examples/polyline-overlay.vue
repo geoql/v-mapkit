@@ -67,7 +67,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Polyline Overlay"
     description="VPolylineOverlay connects coordinates into a line: routes, GPS traces, transit paths. Same coordinate-array API as polygons, but open-ended. Endpoints are marked here for clarity."
   >
@@ -85,8 +86,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="PolylineOverlay.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

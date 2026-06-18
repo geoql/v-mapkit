@@ -54,7 +54,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Annotation Callout"
     description="Nest VAnnotationCallout inside any annotation to replace the default bubble with your own markup. It wires itself up as the annotation's callout delegate. Click the pin to open it."
   >
@@ -93,8 +94,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="AnnotationCallout.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

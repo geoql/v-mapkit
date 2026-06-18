@@ -81,7 +81,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Marker Annotation"
     description="VMarkerAnnotation renders MapKit's classic teardrop pin. Pass a [lat, lng] tuple plus an annotation object for the title, subtitle, color, and an optional glyph. Click a pin to see its callout."
   >
@@ -96,8 +97,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="MarkerAnnotation.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

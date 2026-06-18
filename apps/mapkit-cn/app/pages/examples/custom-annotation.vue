@@ -73,7 +73,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Custom Annotation"
     description="VCustomAnnotation hands you full control: provide an element factory that returns any DOM node and MapKit anchors it to the coordinate. Perfect for price tags, avatars, or live badges."
   >
@@ -88,8 +89,5 @@
       </VMap>
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="CustomAnnotation.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

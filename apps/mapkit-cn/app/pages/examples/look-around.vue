@@ -60,12 +60,15 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Look Around"
     description="VLookAround embeds Apple's interactive street-level imagery. It's a standalone component: pass it a MapKit Place (from search or geocoding) and users can pan and move through the scene."
   >
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <ExampleMapContainer height="h-[24rem]">
+    <div
+      class="grid size-full grid-cols-1 grid-rows-2 gap-px bg-border lg:grid-cols-2 lg:grid-rows-1"
+    >
+      <ExampleMapContainer>
         <VMap :access-token="token" color-scheme="light" @map="onMap">
           <VMarkerAnnotation
             :coordinates="marker"
@@ -74,9 +77,7 @@
         </VMap>
       </ExampleMapContainer>
 
-      <div
-        class="relative h-96 w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm"
-      >
+      <div class="relative min-h-0 overflow-hidden bg-card">
         <ClientOnly>
           <div v-if="place" class="absolute inset-0">
             <VLookAround
@@ -94,8 +95,5 @@
       </div>
     </div>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="LookAround.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

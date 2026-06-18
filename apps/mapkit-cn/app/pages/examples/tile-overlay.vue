@@ -43,7 +43,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Tile Overlay"
     description="VTileOverlay layers custom raster tiles on top of the base map using a {z}/{x}/{y} URL template: weather, terrain, or third-party basemaps. Toggle the OpenStreetMap layer below."
   >
@@ -67,8 +68,5 @@
       </Button>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="TileOverlay.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

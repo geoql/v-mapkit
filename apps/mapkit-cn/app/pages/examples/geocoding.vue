@@ -87,7 +87,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Geocoding"
     description="useGeocoder converts between addresses and coordinates. geocode turns text into places; reverseGeocode turns a coordinate back into an address. The result is pinned on the map."
   >
@@ -138,8 +139,5 @@
       </div>
     </template>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="Geocoding.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

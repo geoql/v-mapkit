@@ -199,11 +199,5 @@ export const allExamples: ExampleMeta[] = exampleGroups.flatMap(
   (group) => group.examples,
 );
 
-export function findExample(slug: string): ExampleMeta | undefined {
-  return allExamples.find((example) => example.slug === slug);
-}
-
-
-
-export const GITHUB_EXAMPLES_BASE =
-  'https://github.com/geoql/v-mapkit/blob/main/playground/mapkit-cn/app/pages/examples';
+export const GITHUB_EDIT_BASE =
+  'https://github.com/geoql/v-mapkit/edit/main/apps/mapkit-cn/app/pages/examples';

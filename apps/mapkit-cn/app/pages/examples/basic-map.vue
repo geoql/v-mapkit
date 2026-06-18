@@ -49,7 +49,8 @@
 </script>
 
 <template>
-  <ExampleCard
+  <ComponentDemo
+    :code="code"
     title="Basic Map"
     description="The smallest possible map: pass your MapKit token to VMap, then center it once the map is ready via the @map event. Coordinates and regions aren't props: they're applied through the live MapKit instance."
   >
@@ -62,8 +63,5 @@
       />
     </ExampleMapContainer>
 
-    <template #code>
-      <ExampleCodeBlock :code="code" filename="BasicMap.vue" />
-    </template>
-  </ExampleCard>
+  </ComponentDemo>
 </template>

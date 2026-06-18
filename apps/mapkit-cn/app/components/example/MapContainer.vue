@@ -1,22 +1,9 @@
 <script setup lang="ts">
-  withDefaults(
-    defineProps<{
-      /** Container height utility — defaults to a comfortable demo height. */
-      height?: string;
-    }>(),
-    {
-      height: 'h-[28rem] lg:h-full',
-    },
-  );
-
   const { hasToken } = useMapkitToken();
 </script>
 
 <template>
-  <div
-    class="relative w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm"
-    :class="height"
-  >
+  <div class="relative size-full overflow-hidden bg-card">
     <!-- Token present: render the map. ClientOnly because MapKit JS needs the DOM + window. -->
     <ClientOnly>
       <template v-if="hasToken">
