@@ -82,10 +82,10 @@
   <div>
     <!-- ───────────────────────── Hero ───────────────────────── -->
     <section
-      class="container grid min-h-[calc(100dvh-3rem)] items-center gap-12 py-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-0"
-  >
-    <!-- Copy -->
-    <div class="flex flex-col items-start gap-7">
+      class="container grid min-h-[calc(100dvh-3rem)] grid-cols-1 items-center gap-12 py-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-0"
+    >
+      <!-- Copy -->
+      <div class="flex min-w-0 flex-col items-start gap-7">
       <Badge variant="primary" class="gap-1.5 px-3 py-1 font-mono">
         <span class="size-1.5 rounded-full bg-primary"></span>
         v{{ version }}
@@ -125,7 +125,7 @@
       </div>
 
       <div
-        class="flex items-center gap-5 pt-1 font-mono text-xs text-muted-foreground"
+        class="flex flex-wrap items-center gap-x-5 gap-y-1 pt-1 font-mono text-xs text-muted-foreground"
       >
         <span class="tabular-nums">{{ componentCount }} components</span>
         <span class="text-border">·</span>
@@ -223,8 +223,10 @@
 
   <!-- ──────────────────────── Quick start ──────────────────────── -->
   <section class="container py-16 sm:py-24">
-    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
-      <div class="space-y-5">
+    <div
+      class="grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16"
+    >
+      <div class="min-w-0 space-y-5">
         <p
           class="font-mono text-xs font-semibold uppercase tracking-wider text-primary"
         >
