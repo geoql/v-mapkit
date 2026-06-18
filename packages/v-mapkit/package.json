@@ -70,7 +70,7 @@
     "@vitest/coverage-v8": "^4.1.9",
     "@vue/test-utils": "^2.4.11",
     "@vue/tsconfig": "^0.9.1",
-    "happy-dom": "^20.10.4",
+    "happy-dom": "^20.10.6",
     "typescript": "^6.0.3",
     "unplugin-vue": "^7.2.0",
     "vite-plus": "^0.1.24",
