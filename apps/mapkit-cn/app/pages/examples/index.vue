@@ -56,7 +56,7 @@
           </p>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <ExampleGalleryCard
             v-for="example in group.examples"
             :key="example.slug"

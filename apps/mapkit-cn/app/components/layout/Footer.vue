@@ -41,7 +41,7 @@
 <template>
   <footer class="border-t border-border/60 bg-card/30">
     <div class="container py-16">
-      <div class="grid gap-12 md:grid-cols-[1.5fr_repeat(3,1fr)]">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div class="flex flex-col gap-3">
           <NuxtLink
             to="/"

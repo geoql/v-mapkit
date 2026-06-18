@@ -197,7 +197,7 @@
   <!-- ──────────────────── Feature highlights ──────────────────── -->
   <section class="border-t border-border/60 bg-card/30">
     <div class="container py-16 sm:py-20">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="item in highlights"
           :key="item.id"

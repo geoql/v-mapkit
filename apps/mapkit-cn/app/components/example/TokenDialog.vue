@@ -42,7 +42,7 @@
     <PopoverContent
       :side-offset="8"
       align="center"
-      class="w-80 rounded-xl text-left"
+      class="w-[min(20rem,calc(100vw-2rem))] rounded-xl text-left"
     >
         <div class="mb-3 space-y-1">
           <h3 class="text-sm font-semibold text-foreground">

@@ -79,7 +79,7 @@
     title="Look Around Preview"
     description="VLookAroundPreview shows a static, tappable Look Around thumbnail: perfect for cards and list items. Search a landmark and the preview updates. Tapping it opens the full interactive view."
   >
-    <div class="grid gap-4 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <ExampleMapContainer height="h-[22rem]">
         <VMap :access-token="token" color-scheme="dark" @map="onMap">
           <VMarkerAnnotation

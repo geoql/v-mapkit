@@ -64,7 +64,7 @@
     title="Look Around"
     description="VLookAround embeds Apple's interactive street-level imagery. It's a standalone component: pass it a MapKit Place (from search or geocoding) and users can pan and move through the scene."
   >
-    <div class="grid gap-4 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <ExampleMapContainer height="h-[24rem]">
         <VMap :access-token="token" color-scheme="light" @map="onMap">
           <VMarkerAnnotation
