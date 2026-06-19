@@ -34,7 +34,7 @@ catalogs:
 
   app:docs:
     "@iconify-json/simple-icons": ^1.2.86
-    "@lucide/vue": ^1.20.0
+    "@lucide/vue": ^1.21.0
     "@nuxt/content": ^3.14.0
     "@nuxt/fonts": ^0.14.0
     "@nuxt/icon": ^2.2.3
