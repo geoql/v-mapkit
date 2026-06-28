@@ -16,6 +16,9 @@
 
   const selected = ref<(typeof managers)[number]['id']>('npm');
 
+  const tabBaseClass =
+    'rounded-md px-2 py-0.5 font-mono text-xs transition-colors';
+
   const command = computed(() => {
     const mgr = managers.find((m) => m.id === selected.value) ?? managers[0];
     return props.registry
@@ -37,15 +40,14 @@
           v-for="mgr in managers"
           :key="mgr.id"
           type="button"
-          :class="[
-            'rounded-md px-2 py-0.5 font-mono text-xs transition-colors',
+          :class="`${tabBaseClass} ${
             selected === mgr.id
               ? 'bg-secondary text-foreground'
-              : 'text-muted-foreground hover:text-foreground',
-          ]"
+              : 'text-muted-foreground hover:text-foreground'
+          }`"
           @click="selected = mgr.id"
         >
-          <span class="text-[10px] text-muted-foreground/60">&gt;_</span>
+          <span class="text-micro text-muted-foreground/60">&gt;_</span>
           {{ mgr.label }}
         </button>
       </div>
