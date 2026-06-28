@@ -38,6 +38,13 @@
   --tracking-tighter: -0.03em;
   --tracking-tight: -0.02em;
   --tracking-normal: -0.01em;
+  --tracking-label: 0.18em;
+
+  --text-code: 0.8125rem;
+  --text-code-xs: 0.6875rem;
+  --text-label: 0.9375rem;
+  --text-micro: 10px;
+  --text-mini: 11px;
 
   /* ─── Light-mode tokens — white surfaces, #1d1d1f text ─── */
   --color-background: oklch(1 0 0);
