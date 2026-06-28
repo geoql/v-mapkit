@@ -18,6 +18,28 @@
 - add support for `nvm` ([55dfe11](https://github.com/geoql/v-mapkit/commit/55dfe1142f02ae684b0cc70f1f0f6113268abb89))
 - update `.vscode` setting(s) ([d318b05](https://github.com/geoql/v-mapkit/commit/d318b0582e3bcd020d8025e58aa48f6eebf1bbee))
 
+## [2.0.0](https://github.com/geoql/v-mapkit/compare/v1.0.0...v2.0.0) (2026-06-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** replace deprecated lucide-vue-next with @lucide/vue
+
+### Bug Fixes
+
+* **deps:** replace deprecated lucide-vue-next with @lucide/vue ([f527081](https://github.com/geoql/v-mapkit/commit/f52708131037908a2a61a95e387b497a7fe890a1))
+
+
+### Miscellaneous
+
+* **deps:** bump dependencies to latest patch/minor ([09b30f6](https://github.com/geoql/v-mapkit/commit/09b30f6d02902f20ef4ad36e069fce5a0c7b4787))
+* **deps:** bump dependencies to latest patch/minor ([eceefac](https://github.com/geoql/v-mapkit/commit/eceefac9e864ce247aef7f82b4ed81dc78e6fcfe))
+
+
+### Code Refactoring
+
+* **docs:** kebab-case composable filenames + align AGENTS.md ([d473faf](https://github.com/geoql/v-mapkit/commit/d473fafbce5bd4ac145ad3e3ca5951a726aa7ecb))
+
 ## [1.0.0](https://github.com/geoql/v-mapkit/compare/v0.3.0...v1.0.0) (2026-06-12)
 
 
