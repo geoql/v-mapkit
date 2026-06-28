@@ -81,7 +81,7 @@
           <div
             class="space-y-1.5 rounded-lg bg-popover/90 p-3 text-left shadow-md backdrop-blur"
           >
-            <p class="text-[0.6875rem] font-semibold uppercase tracking-wide text-muted-foreground">
+            <p class="text-code-xs font-semibold uppercase tracking-wide text-muted-foreground">
               Legend
             </p>
             <div

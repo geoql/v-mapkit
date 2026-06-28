@@ -172,7 +172,7 @@
               <p class="text-sm font-medium text-foreground">
                 See it live
               </p>
-              <p class="mx-auto max-w-xs text-[0.8125rem] text-muted-foreground">
+              <p class="mx-auto max-w-xs text-code text-muted-foreground">
                 Add your MapKit token to render a real Apple map right here.
               </p>
             </div>
@@ -238,7 +238,7 @@
           A map in five lines.
         </h2>
         <p
-          class="max-w-md text-[0.9375rem] leading-relaxed text-muted-foreground"
+          class="max-w-md text-label/relaxed text-muted-foreground"
         >
           Import the components you need and pass your MapKit token. No
           wrappers, no boilerplate: annotations and overlays are just child

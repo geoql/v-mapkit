@@ -18,7 +18,7 @@
         aria-label="mapkit-cn home"
       >
         <Icon name="lucide:map" class="size-4.5 text-primary" />
-        <span class="text-[0.9375rem] font-semibold tracking-tight">
+        <span class="text-label font-semibold tracking-tight">
           mapkit<span class="text-muted-foreground">-cn</span>
         </span>
       </NuxtLink>
