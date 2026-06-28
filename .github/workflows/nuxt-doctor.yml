@@ -40,7 +40,7 @@ jobs:
         run: pnpm --filter mapkit-cn-app run postinstall
 
       - name: Audit app with nuxt-doctor
-        uses: geoql/doctor-action@v1
+        uses: geoql/doctor-action@v2
         with:
           framework: nuxt
           working-directory: apps/mapkit-cn

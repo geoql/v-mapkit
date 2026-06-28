@@ -32,7 +32,7 @@ jobs:
         run: pnpm install --filter @geoql/v-mapkit... --frozen-lockfile
 
       - name: Audit library with vue-doctor
-        uses: geoql/doctor-action@v1
+        uses: geoql/doctor-action@v2
         with:
           framework: vue
           working-directory: packages/v-mapkit
