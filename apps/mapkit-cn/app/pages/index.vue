@@ -21,7 +21,7 @@
 
   const config = useRuntimeConfig();
   const version = config.public.library.version;
-  const { token } = useMapkitToken();
+  const { token, hasToken } = useMapkitToken();
 
   const componentCount = 18;
   const composableCount = 4;
@@ -140,7 +140,7 @@
       class="relative h-96 w-full overflow-hidden rounded-2xl border border-border bg-card shadow-lg sm:h-120 lg:h-136"
     >
       <ClientOnly>
-        <template v-if="token">
+        <template v-if="hasToken">
           <div class="demo-map-container absolute inset-0">
             <VMap
               :access-token="token"

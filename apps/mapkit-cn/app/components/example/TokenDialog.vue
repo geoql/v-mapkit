@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { isValidMapKitToken } from '~/composables/useMapkitToken';
   import { Button } from '@/components/ui/button';
   import { Input } from '@/components/ui/input';
   import {
@@ -11,13 +12,28 @@
 
   const open = ref(false);
   const draft = ref('');
+  const error = ref('');
 
   watch(open, (isOpen) => {
-    if (isOpen) draft.value = token.value;
+    if (isOpen) {
+      draft.value = token.value;
+      error.value = '';
+    }
+  });
+
+  watch(draft, () => {
+    error.value = '';
   });
 
   function save(): void {
-    setToken(draft.value);
+    const next = draft.value.trim();
+    if (!isValidMapKitToken(next)) {
+      error.value =
+        'That doesn\'t look like a MapKit JS token. It should be a JWT with three base64url parts (header.payload.signature).';
+      return;
+    }
+
+    setToken(next);
     open.value = false;
   }
 
@@ -62,6 +78,15 @@
           class="font-mono text-xs"
           @keydown.enter="save"
         />
+
+        <p
+          v-if="error"
+          class="mt-2 text-xs text-destructive"
+          role="alert"
+          aria-live="polite"
+        >
+          {{ error }}
+        </p>
 
         <div class="mt-3 flex items-center justify-between gap-2">
           <a
