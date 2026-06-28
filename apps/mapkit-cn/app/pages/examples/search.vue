@@ -86,8 +86,8 @@
     <ExampleMapContainer>
       <VMap :access-token="token" color-scheme="light" @map="onMap">
         <VMarkerAnnotation
-          v-for="(place, index) in results"
-          :key="index"
+          v-for="place in results"
+          :key="`${place.coordinate.latitude},${place.coordinate.longitude}`"
           :coordinates="placeCoordinates(place)"
           :annotation="placeAnnotation(place)"
         />
@@ -106,8 +106,8 @@
           class="absolute z-10 mt-1 w-full overflow-hidden rounded-lg border border-border bg-popover shadow-lg"
         >
           <li
-            v-for="(item, index) in suggestions.slice(0, 6)"
-            :key="index"
+            v-for="item in suggestions.slice(0, 6)"
+            :key="(item.displayLines ?? []).join('|')"
           >
             <button
               type="button"
