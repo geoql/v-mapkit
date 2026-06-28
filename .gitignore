@@ -114,3 +114,4 @@ sw.*
 tmp/
 docs/superpowers/
 .opencode
+.cortexkit
