@@ -7,7 +7,6 @@
     "app/components/ui/**"
   ],
   "rules": {
-    "dead-code/unused-dependency": "off",
-    "eslint/no-useless-escape": "off"
+    "dead-code/unused-dependency": "off"
   }
 }
