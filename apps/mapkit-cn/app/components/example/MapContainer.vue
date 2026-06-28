@@ -26,7 +26,7 @@
             <p class="text-sm font-medium text-foreground">
               MapKit token required
             </p>
-            <p class="mx-auto max-w-xs text-[0.8125rem] text-muted-foreground">
+            <p class="mx-auto max-w-xs text-code text-muted-foreground">
               Add your Apple MapKit JS token to render the live map. It is
               stored locally in your browser only.
             </p>

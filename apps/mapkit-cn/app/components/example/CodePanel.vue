@@ -60,13 +60,13 @@
       <!-- eslint-disable vue/no-v-html -- Shiki returns trusted, prerendered HTML -->
       <div
         v-if="highlighted"
-        class="shiki-block max-h-[60vh] min-w-0 overflow-auto p-4 text-[0.8125rem] leading-relaxed"
+        class="shiki-block max-h-[60vh] min-w-0 overflow-auto p-4 text-code/relaxed"
         v-html="highlighted"
       ></div>
       <!-- eslint-enable vue/no-v-html -->
       <pre
         v-else
-        class="max-h-[60vh] min-w-0 overflow-auto p-4 text-[0.8125rem] leading-relaxed"
+        class="max-h-[60vh] min-w-0 overflow-auto p-4 text-code/relaxed"
       ><code class="font-mono text-foreground/90">{{ trimmed }}</code></pre>
     </div>
   </div>

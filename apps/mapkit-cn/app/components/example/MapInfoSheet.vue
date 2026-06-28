@@ -38,7 +38,7 @@
         aria-label="Open example details"
       >
         <span
-          class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground"
+          class="font-mono text-mini uppercase tracking-label text-muted-foreground"
         >
           Details
         </span>

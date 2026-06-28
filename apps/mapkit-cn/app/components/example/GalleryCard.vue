@@ -18,10 +18,10 @@
     </span>
 
     <div class="space-y-1">
-      <h3 class="text-[0.9375rem] font-semibold tracking-tight text-foreground">
+      <h3 class="text-label font-semibold tracking-tight text-foreground">
         {{ example.title }}
       </h3>
-      <p class="text-[0.8125rem] leading-relaxed text-muted-foreground">
+      <p class="text-code/relaxed text-muted-foreground">
         {{ example.description }}
       </p>
     </div>

@@ -52,13 +52,13 @@
     <!-- eslint-disable vue/no-v-html -- Shiki returns trusted, prerendered HTML -->
     <div
       v-if="highlighted"
-      class="shiki-block min-w-0 overflow-auto p-4 text-[0.8125rem] leading-relaxed lg:min-h-0 lg:flex-1"
+      class="shiki-block min-w-0 overflow-auto p-4 text-code/relaxed lg:min-h-0 lg:flex-1"
       v-html="highlighted"
     ></div>
     <!-- eslint-enable vue/no-v-html -->
     <pre
       v-else
-      class="min-w-0 overflow-auto p-4 text-[0.8125rem] leading-relaxed lg:min-h-0 lg:flex-1"
+      class="min-w-0 overflow-auto p-4 text-code/relaxed lg:min-h-0 lg:flex-1"
     ><code class="font-mono text-foreground/90">{{ trimmed }}</code></pre>
   </figure>
 </template>
