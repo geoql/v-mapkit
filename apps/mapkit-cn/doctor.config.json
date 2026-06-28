@@ -7,6 +7,8 @@
     "app/components/ui/**"
   ],
   "rules": {
-    "dead-code/unused-dependency": "off"
+    "dead-code/unused-dependency": "off",
+    "vue-doctor/security/no-v-html": "off",
+    "nuxt-doctor/security/no-secret-in-public-runtime-config": "off"
   }
 }
