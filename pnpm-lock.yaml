@@ -10,8 +10,8 @@ catalogs:
       specifier: ^1.2.87
       version: 1.2.87
     '@lucide/vue':
-      specifier: ^1.21.0
-      version: 1.21.0
+      specifier: ^1.22.0
+      version: 1.22.0
     '@nuxt/content':
       specifier: ^3.14.0
       version: 3.14.0
@@ -225,7 +225,7 @@ importers:
     dependencies:
       '@lucide/vue':
         specifier: catalog:app:docs
-        version: 1.21.0(vue@3.5.39(typescript@6.0.3))
+        version: 1.22.0(vue@3.5.39(typescript@6.0.3))
       '@nuxt/content':
         specifier: catalog:app:docs
         version: 3.14.0(@valibot/to-json-schema@1.7.1(valibot@1.4.1(typescript@6.0.3)))(better-sqlite3@12.11.1)(magicast@0.5.3)(valibot@1.4.1(typescript@6.0.3))
@@ -1490,8 +1490,8 @@ packages:
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
 
-  '@lucide/vue@1.21.0':
-    resolution: {integrity: sha512-eoFn3tppjKAc12ZqdnRSMFdtwQ1ZMRQFb6SV1Eub6Y8kU28ccnqKeSFdnur9hMg8gIbosU2Y3WFJr/J/xS/IlQ==}
+  '@lucide/vue@1.22.0':
+    resolution: {integrity: sha512-2/+mGF+NrHieiGTwq5wHRVsLhtzoY8x64ovvQkVYDXLrLHKqE/58xR/hveFsxkH0Ey4M8UsvsYNxAHjPgbTyqQ==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -9371,7 +9371,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@lucide/vue@1.21.0(vue@3.5.39(typescript@6.0.3))':
+  '@lucide/vue@1.22.0(vue@3.5.39(typescript@6.0.3))':
     dependencies:
       vue: 3.5.39(typescript@6.0.3)
 
