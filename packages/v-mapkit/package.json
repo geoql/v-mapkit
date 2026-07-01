@@ -76,7 +76,7 @@
     "vite-plus": "^0.2.1",
     "vitest": "^4.1.9",
     "vue": "^3.5.39",
-    "vue-tsc": "^3.3.5"
+    "vue-tsc": "^3.3.6"
   },
   "peerDependencies": {
     "@vueuse/core": "^14.0.0",
