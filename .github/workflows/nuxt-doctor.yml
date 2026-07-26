@@ -3,7 +3,7 @@ name: "Nuxt Doctor"
 on:
   workflow_call:
     secrets:
-      DOCTOR_API_KEY_MAPKIT_CN:
+      DOCTOR_API_KEY:
         description: "API key for pushing the mapkit-cn app score to app.the-doctor.report"
         required: false
 
