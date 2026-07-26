@@ -47,7 +47,7 @@ catalogs:
     "@lucide/vue": ^1.21.0
     "@nuxt/content": ^3.14.0
     "@nuxt/fonts": ^0.14.0
-    "@nuxt/icon": ^2.2.4
+    "@nuxt/icon": ^2.2.5
     "@nuxtjs/color-mode": ^4.0.1
     "@nuxtjs/tailwindcss": 7.0.0-beta.1
     "@resvg/resvg-wasm": ^2.6.2
@@ -75,7 +75,7 @@ catalogs:
     "@nuxt/eslint": ^1.16.0
     "@nuxt/eslint-config": ^1.16.0
     "@nuxt/fonts": ^0.14.0
-    "@nuxt/icon": ^2.2.4
+    "@nuxt/icon": ^2.2.5
     "@nuxtjs/color-mode": ^4.0.1
     # Pinned: only 7.x supports Tailwind v4. Do NOT bump to 6.x.
     "@nuxtjs/tailwindcss": 7.0.0-beta.1
