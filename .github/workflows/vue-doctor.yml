@@ -39,4 +39,4 @@ jobs:
           threshold: ${{ vars.DOCTOR_THRESHOLD || '70' }}
           fail-on: error
           api-key: ${{ secrets.DOCTOR_API_KEY }}
-          project: geoql/v-mapkit
+          project: ${{ github.repository }}

@@ -46,5 +46,5 @@ jobs:
           working-directory: apps/mapkit-cn
           threshold: ${{ vars.DOCTOR_THRESHOLD || '70' }}
           fail-on: error
-          api-key: ${{ secrets.DOCTOR_API_KEY_MAPKIT_CN }}
-          project: geoql/mapkit-cn
+          api-key: ${{ secrets.DOCTOR_API_KEY }}
+          project: ${{ github.repository }}
