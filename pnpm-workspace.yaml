@@ -43,7 +43,7 @@ catalogs:
     wrangler: ^4.105.0
 
   app:docs:
-    "@iconify-json/simple-icons": ^1.2.87
+    "@iconify-json/simple-icons": ^1.2.88
     "@lucide/vue": ^1.21.0
     "@nuxt/content": ^3.14.0
     "@nuxt/fonts": ^0.14.0
@@ -71,7 +71,7 @@ catalogs:
 
   app:mapkit-cn:
     "@iconify-json/lucide": ^1.2.114
-    "@iconify-json/simple-icons": ^1.2.87
+    "@iconify-json/simple-icons": ^1.2.88
     "@nuxt/eslint": ^1.16.0
     "@nuxt/eslint-config": ^1.16.0
     "@nuxt/fonts": ^0.14.0
