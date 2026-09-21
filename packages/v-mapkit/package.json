@@ -68,7 +68,7 @@
     "@types/apple-mapkit-js-browser": "^5.78.1",
     "@types/node": "^25.9.4",
     "@vitest/coverage-v8": "^4.1.9",
-    "@vue/test-utils": "^2.4.11",
+    "@vue/test-utils": "^2.5.1",
     "@vue/tsconfig": "^0.9.1",
     "happy-dom": "^20.10.6",
     "typescript": "^6.0.3",
