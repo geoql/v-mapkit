@@ -57,7 +57,7 @@ catalogs:
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
     nuxt-og-image: ^6.7.0
-    oxlint: ^1.71.0
+    oxlint: ^1.83.0
     reka-ui: ^2.10.1
     satori: ^0.26.0
     shadcn-nuxt: ^2.7.4
@@ -87,9 +87,9 @@ catalogs:
     clsx: ^2.1.1
     eslint: ^10.6.0
     eslint-plugin-better-tailwindcss: ^4.6.0
-    eslint-plugin-oxlint: ^1.71.0
+    eslint-plugin-oxlint: ^1.83.0
     nuxt-og-image: ^6.7.0
-    oxlint: ^1.71.0
+    oxlint: ^1.83.0
     reka-ui: ^2.10.1
     satori: ^0.26.0
     shadcn-nuxt: ^2.7.4
