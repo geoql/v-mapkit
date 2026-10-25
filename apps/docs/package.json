@@ -9,13 +9,17 @@
     "typecheck": "nuxt typecheck",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vp test run tests",
+    "deploy": "wrangler deploy --config .output/server/wrangler.json"
   },
   "dependencies": {
     "@lucide/vue": "catalog:app:docs",
     "@nuxt/content": "catalog:app:docs",
     "@nuxt/icon": "catalog:app:docs",
+    "@nuxt/scripts": "catalog:app:docs",
     "@nuxtjs/color-mode": "catalog:app:docs",
+    "@openpanel/nuxt": "catalog:app:docs",
     "@vueuse/core": "catalog:app:docs",
     "@vueuse/nuxt": "catalog:app:docs",
     "better-sqlite3": "catalog:app:docs",
@@ -30,7 +34,6 @@
   "devDependencies": {
     "@iconify-json/simple-icons": "catalog:app:docs",
     "@nuxt/fonts": "catalog:app:docs",
-    "@nuxtjs/plausible": "catalog:default",
     "@nuxtjs/tailwindcss": "catalog:app:docs",
     "@resvg/resvg-wasm": "catalog:app:docs",
     "nuxt-og-image": "catalog:app:docs",
@@ -39,6 +42,7 @@
     "shadcn-nuxt": "catalog:app:docs",
     "tailwindcss": "catalog:app:docs",
     "typescript": "catalog:app:docs",
+    "vite-plus": "catalog:",
     "vue": "catalog:app:docs",
     "vue-tsc": "catalog:app:docs",
     "wrangler": "catalog:default"

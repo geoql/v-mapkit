@@ -49,8 +49,8 @@ This app owns its theme, so the design skill now applies (unlike the old Docus s
 - **UI**: `shadcn-nuxt` (reka-ui) + Tailwind CSS v4 (`@nuxtjs/tailwindcss`)
 - **Fonts**: `@nuxt/fonts` — Geist + Geist Mono (Google provider)
 - **Color mode**: `@nuxtjs/color-mode` (`preference: system`, fallback dark)
-- **Deployment**: Cloudflare Pages (project `v-mapkit-docs`), `cloudflare-pages` Nitro preset
-- **Analytics**: `@nuxtjs/plausible` (`v-mapkit.geoql.in`)
+- **Deployment**: Cloudflare Worker `v-mapkit-docs` on the custom domain `v-mapkit.geoql.in` (`cloudflare_module` Nitro preset; `pnpm run deploy` runs `wrangler deploy` on the generated `.output/server/wrangler.json`)
+- **Analytics**: Plausible + OpenPanel + GA4 via `useAnalytics()` (`app/composables/use-analytics.ts`). GA4 stays off while `runtimeConfig.public.gtagId` is empty
 - **Lint**: `oxlint` (run `pnpm lint`)
 
 ## Project Structure
@@ -73,7 +73,7 @@ apps/docs/
 │   ├── types/                     # NavItem, NavSection
 │   └── app.vue
 ├── content/                       # Markdown docs (guide/*)
-├── nuxt.config.ts                 # Nuxt + Nitro/Cloudflare (D1) + fonts + plausible + shadcn
+├── nuxt.config.ts                 # Nuxt + Nitro/Cloudflare Worker (D1) + fonts + analytics + shadcn
 ├── components.json                # shadcn-vue config
 └── package.json
 ```
