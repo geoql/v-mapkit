@@ -71,14 +71,14 @@
           <ul class="flex flex-col gap-2.5">
             <li v-for="link in group.links" :key="link.label">
               <NuxtLink
-                v-if="link.to"
+                v-if="'to' in link"
                 :to="link.to"
                 class="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
               >
                 {{ link.label }}
               </NuxtLink>
               <a
-                v-else
+                v-else-if="'href' in link"
                 :href="link.href"
                 target="_blank"
                 rel="noopener noreferrer"

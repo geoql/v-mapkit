@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Pencil, CircleDot, ArrowLeft, ArrowRight, FileText } from '@lucide/vue';
-  import type { NavItem } from '~/types';
+  import type { NavItem } from '~/types/navigation';
 
   defineProps<{
     prev: NavItem | null;
