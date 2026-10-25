@@ -130,7 +130,11 @@ export default defineNuxtConfig({
         compatibility_date: '2026-10-24',
         compatibility_flags: ['nodejs_compat'],
         workers_dev: false,
-        routes: [{ pattern: 'v-mapkit.geoql.in', custom_domain: true }],
+        // Zone route for now: the geoql.in zone still holds the proxied CNAME
+        // the old Pages project created, and a custom domain cannot attach while
+        // it exists. Once that record is deleted, switch to
+        // { pattern: 'v-mapkit.geoql.in', custom_domain: true }.
+        routes: [{ pattern: 'v-mapkit.geoql.in/*', zone_name: 'geoql.in' }],
         observability: { enabled: true },
         d1_databases: [
           {
