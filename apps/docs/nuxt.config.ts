@@ -90,7 +90,7 @@ export default defineNuxtConfig({
       // Public analytics IDs (they ship in the HTML, so they are not secrets).
       // Each is overridable with its NUXT_PUBLIC_* env. An empty gtagId skips
       // GA4 entirely: no GA4 property exists for this host yet.
-      gtagId: '',
+      gtagId: 'G-TRXGMMFMXS',
       plausibleScriptId: 'pa-cy6xbyHYien2bWm1sqKh0',
       plausibleApiHost: 'https://analytics.geoql.in',
     },
