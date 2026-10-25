@@ -6,6 +6,8 @@
 [![JSR](https://jsr.io/badges/@geoql/v-mapkit)](https://jsr.io/@geoql/v-mapkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+**Docs:** [v-mapkit.geoql.in](https://v-mapkit.geoql.in) · **Live examples:** [mapkit-cn.geoql.in](https://mapkit-cn.geoql.in)
+
 ## Packages
 
 | Package                         | Description                          |
@@ -14,10 +16,10 @@
 
 ## Apps
 
-| App                           | Description                                   |
-| ----------------------------- | --------------------------------------------- |
-| [mapkit-cn](./apps/mapkit-cn) | Showcase site with 23 live examples (Nuxt 4)  |
-| [docs](./apps/docs)           | Documentation site (Nuxt 4 + `@nuxt/content`) |
+| App                           | Description                                                                                    |
+| ----------------------------- | ---------------------------------------------------------------------------------------------- |
+| [mapkit-cn](./apps/mapkit-cn) | Showcase site with 23 live examples (Nuxt 4), [mapkit-cn.geoql.in](https://mapkit-cn.geoql.in) |
+| [docs](./apps/docs)           | Documentation site (Nuxt 4 + `@nuxt/content`), [v-mapkit.geoql.in](https://v-mapkit.geoql.in)  |
 
 ## Quick Start
 
@@ -61,7 +63,7 @@ npx shadcn-vue@latest add https://mapkit-cn.geoql.in/r/v-map
 
 ## Development
 
-This monorepo uses [pnpm v11](https://pnpm.io) workspaces.
+This monorepo uses [pnpm v12](https://pnpm.io) workspaces.
 
 ```bash
 # Install all dependencies

@@ -23,12 +23,15 @@
     "lint": "pnpm -r run lint",
     "format": "pnpm -r run format",
     "format:check": "pnpm -r run format:check",
-    "test": "pnpm --filter @geoql/v-mapkit run test",
+    "test": "pnpm --filter @geoql/v-mapkit run test && pnpm --filter v-mapkit-docs run test",
     "test:coverage": "pnpm --filter @geoql/v-mapkit run test:coverage",
     "prepare": "is-ci || husky",
-    "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/.nuxt apps/*/.output",
     "update:deps": "pnpm dlx taze -I -r",
-    "doctor:check": "vue-doctor"
+    "doctor:check": "vue-doctor",
+    "clean:build": "rm -rf packages/*/dist apps/*/.nuxt apps/*/.output apps/*/dist",
+    "test:apps": "pnpm --filter v-mapkit-docs run test",
+    "typecheck": "pnpm --filter @geoql/v-mapkit run type-check && pnpm --filter v-mapkit-docs run typecheck && pnpm --filter mapkit-cn-app run typecheck",
+    "deploy": "pnpm --filter v-mapkit-docs run build && pnpm --filter v-mapkit-docs run deploy"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:default",
@@ -37,9 +40,11 @@
     "is-ci": "catalog:default",
     "lint-staged": "catalog:default"
   },
-  "engines": {
-    "node": ">=24.11.0",
-    "pnpm": ">=11"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=26.x"
+    }
   },
-  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
+  "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61"
 }
