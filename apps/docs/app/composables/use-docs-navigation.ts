@@ -1,4 +1,4 @@
-import type { NavSection } from '~/types';
+import type { NavSection } from '~/types/navigation';
 
 export function useDocsNavigation() {
   const route = useRoute();

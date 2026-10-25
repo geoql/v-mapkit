@@ -8,14 +8,14 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     'nuxt-og-image',
-    [
-      '@nuxtjs/plausible',
-      {
-        domain: 'v-mapkit.geoql.in',
-        apiHost: 'https://analytics.geoql.in',
-        autoOutboundTracking: true,
-      },
-    ],
+    // GA4 through useScriptGoogleAnalytics (app/plugins/google-analytics.client.ts).
+    // Plausible loads from app/plugins/plausible.client.ts, not a module: the
+    // pa-*.js tracker needs the official init snippet, which neither
+    // @nuxtjs/plausible nor the @nuxt/scripts Plausible helper runs.
+    '@nuxt/scripts',
+    // OpenPanel product analytics (self-hosted at events.geoql.in). Client-side
+    // only, so no client secret.
+    '@openpanel/nuxt',
   ],
 
   devtools: { enabled: false },
@@ -59,9 +59,23 @@ export default defineNuxtConfig({
     name: 'v-mapkit',
   },
 
+  openpanel: {
+    // Public client ID of the v-mapkit.geoql.in project (NUXT_PUBLIC_OPENPANEL_CLIENT_ID).
+    clientId:
+      process.env.NUXT_PUBLIC_OPENPANEL_CLIENT_ID ??
+      'e2670834-9143-4dca-bce9-37786f5d8e85',
+    apiUrl: 'https://events.geoql.in/api',
+    trackScreenViews: true,
+    trackOutgoingLinks: true,
+    trackAttributes: true,
+    // A proxy handler hardcodes api.openpanel.dev and would bypass the
+    // self-hosted apiUrl; direct client POST is correct here.
+    proxy: false,
+  },
+
   ogImage: {
     // Generate OG images at build time; skip per-request cache storage
-    // during prerender to keep the Cloudflare Pages worker bundle small.
+    // during prerender to keep the Worker bundle small.
     runtimeCacheStorage: false,
     // Canonical OG size (1.91:1); overrides the module's 1200x600 default.
     defaults: {
@@ -73,6 +87,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'https://v-mapkit.geoql.in',
+      // Public analytics IDs (they ship in the HTML, so they are not secrets).
+      // Each is overridable with its NUXT_PUBLIC_* env. An empty gtagId skips
+      // GA4 entirely: no GA4 property exists for this host yet.
+      gtagId: '',
+      plausibleScriptId: 'pa-cy6xbyHYien2bWm1sqKh0',
+      plausibleApiHost: 'https://analytics.geoql.in',
     },
   },
 
@@ -95,17 +115,27 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2026-05-26',
+  compatibilityDate: '2026-10-24',
 
   nitro: {
-    preset: 'cloudflare-pages',
+    preset: 'cloudflare_module',
     cloudflare: {
+      // deployConfig writes the merged Worker config to
+      // .output/server/wrangler.json at build time. It is the only Worker
+      // config: pnpm run deploy runs wrangler deploy --config on that file.
       deployConfig: true,
       nodeCompat: true,
       wrangler: {
         name: 'v-mapkit-docs',
-        compatibility_date: '2026-05-26',
+        compatibility_date: '2026-10-24',
         compatibility_flags: ['nodejs_compat'],
+        workers_dev: false,
+        // Zone route for now: the geoql.in zone still holds the proxied CNAME
+        // the old Pages project created, and a custom domain cannot attach while
+        // it exists. Once that record is deleted, switch to
+        // { pattern: 'v-mapkit.geoql.in', custom_domain: true }.
+        routes: [{ pattern: 'v-mapkit.geoql.in/*', zone_name: 'geoql.in' }],
+        observability: { enabled: true },
         d1_databases: [
           {
             binding: 'DB',

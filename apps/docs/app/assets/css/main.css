@@ -254,8 +254,10 @@
     @apply my-8 border-border/60;
   }
 
+  /* Block + overflow-x-auto: wide API tables scroll inside their own box
+     instead of widening the page on narrow screens. */
   .prose table {
-    @apply w-full border-separate text-left text-sm;
+    @apply block w-full max-w-full overflow-x-auto border-separate text-left text-sm;
     border-spacing: 0;
   }
 

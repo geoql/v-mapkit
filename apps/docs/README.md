@@ -17,4 +17,4 @@ pnpm run build
 
 ## Deployment
 
-Deployed to Cloudflare Pages via GitHub Actions.
+Deployed to the Cloudflare Worker `v-mapkit-docs` at https://v-mapkit.geoql.in via GitHub Actions (`pnpm run deploy` for a manual deploy).

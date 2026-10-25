@@ -1,7 +1,9 @@
 <script setup lang="ts">
   import { Check, Copy } from '@lucide/vue';
 
-  defineProps<{
+  import { installCommand } from '~/utils/analytics-funnel';
+
+  const props = defineProps<{
     code?: string;
     language?: string;
     filename?: string;
@@ -9,6 +11,21 @@
   }>();
 
   const { copy, copied } = useClipboard();
+  const { track } = useAnalytics();
+  const route = useRoute();
+
+  function copyCode(code: string) {
+    copy(code);
+    const install = installCommand(code);
+    if (install) {
+      track('install_command_copied', { ...install, page: route.path });
+      return;
+    }
+    track('code_copied', {
+      language: props.language ?? 'text',
+      page: route.path,
+    });
+  }
 </script>
 
 <template>
@@ -24,7 +41,7 @@
       class="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-md border border-border bg-background text-muted-foreground opacity-0 transition-all hover:text-foreground group-hover:opacity-100"
       :class="{ 'text-foreground opacity-100': copied }"
       aria-label="Copy code"
-      @click="copy(code)"
+      @click="copyCode(code)"
     >
       <Check v-if="copied" class="size-3.5" />
       <Copy v-else class="size-3.5" />

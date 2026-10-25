@@ -241,7 +241,7 @@ const scheme = computed(() => (colorMode.value === 'dark' ? 'dark' : 'light'));
 
 ### Rule #16: Dependency Versions — Use Catalogs
 
-App dependency versions are centralized in **pnpm catalogs** (`pnpm-workspace.yaml`). This `package.json` references them via the `catalog:` protocol — never hard-code a version here. Use `workspace:*` only for the internal library reference. Versions live in two catalogs: `catalog:default` (deps shared with the docs app and root tooling: `nuxt`, `wrangler`, `@nuxtjs/plausible`) and `catalog:app:mapkit-cn` (everything else for this app).
+App dependency versions are centralized in **pnpm catalogs** (`pnpm-workspace.yaml`). This `package.json` references them via the `catalog:` protocol — never hard-code a version here. Use `workspace:*` only for the internal library reference. Versions live in two catalogs: `catalog:default` (deps shared with the docs app and root tooling: `nuxt`, `wrangler`) and `catalog:app:mapkit-cn` (everything else for this app).
 
 ```jsonc
 // CORRECT — workspace ref + catalog refs

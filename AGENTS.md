@@ -119,9 +119,9 @@ v-mapkit/
 
 ## Global Conventions
 
-### Package Manager: pnpm v11
+### Package Manager: pnpm v12
 
-This monorepo uses **pnpm v11** with workspaces (`packageManager: pnpm@11.5.3`, Node `>=24`). All three projects share a single lockfile and install in one command. No Bun, no npm, no yarn.
+This monorepo uses **pnpm v12** with workspaces (`packageManager: pnpm@12.15.0`, Node 26 via `devEngines.runtime`; no `.nvmrc`, no corepack). All three projects share a single lockfile and install in one command. No Bun, no npm, no yarn.
 
 ```bash
 # Install all dependencies
@@ -154,7 +154,8 @@ pnpm run format:check  # pnpm -r run format:check
 
 # Maintenance
 pnpm run update:deps   # pnpm dlx taze -I -r
-pnpm run clean         # Remove node_modules + build artifacts
+pnpm clean --lockfile  # Remove node_modules + pnpm-lock.yaml (pnpm built-in)
+pnpm run clean:build   # Remove build artifacts (dist, .nuxt, .output)
 ```
 
 ### Cross-Package Dependencies
@@ -166,7 +167,7 @@ apps/docs ──────workspace member (own deps, no cross-package link)
 
 ### Dependency Versions
 
-The root and both apps centralize dependency versions in **pnpm catalogs** (defined in `pnpm-workspace.yaml`): `catalog:default` (root tooling + deps shared by both apps — `nuxt`, `wrangler`, `@nuxtjs/plausible`), `catalog:app:docs`, and `catalog:app:mapkit-cn`. Their `package.json` files reference versions via the `catalog:` protocol — bump a version once in `pnpm-workspace.yaml`, then `pnpm install`. Use `workspace:*` only for internal monorepo references (e.g. `apps/mapkit-cn` → `@geoql/v-mapkit`). The published library (`packages/v-mapkit`) is the **only** exception: it is consumed by `npm`/`yarn`/`jsr` users who do not understand pnpm protocols, so its dependency blocks MUST stay real semver (no `catalog:`, no `workspace:*`) — see the library guide.
+The root and both apps centralize dependency versions in **pnpm catalogs** (defined in `pnpm-workspace.yaml`): `catalog:default` (root tooling, the vite-plus toolchain pins, and deps shared by both apps — `nuxt`, `wrangler`), `catalog:app:docs`, and `catalog:app:mapkit-cn`. Their `package.json` files reference versions via the `catalog:` protocol — bump a version once in `pnpm-workspace.yaml`, then `pnpm install`. Use `workspace:*` only for internal monorepo references (e.g. `apps/mapkit-cn` → `@geoql/v-mapkit`). The published library (`packages/v-mapkit`) is the **only** exception: it is consumed by `npm`/`yarn`/`jsr` users who do not understand pnpm protocols, so its dependency blocks MUST stay real semver (no `catalog:`, no `workspace:*`) — see the library guide.
 
 ---
 
@@ -179,7 +180,7 @@ These override per-package rules. Violating any of these = wasted work.
 | 1   | **TypeScript only.** No `.js` files except configs.                                                                                                                | Type safety, autocompletion                                      |
 | 2   | **No `any` type.** Use `unknown` + narrowing, or precise MapKit types.                                                                                             | Prevents silent failures                                         |
 | 3   | **Vue 3 Composition API only** (`<script setup lang="ts">`). No Options API.                                                                                       | Tree-shaking, type inference                                     |
-| 4   | **pnpm v11 only.** No Bun, no npm, no yarn for development.                                                                                                        | Reliable CI/CD                                                   |
+| 4   | **pnpm v12 only.** No Bun, no npm, no yarn for development.                                                                                                        | Reliable CI/CD                                                   |
 | 5   | **100-line maximum per component/file.** Extract logic into composables to stay under it. Hard rule, every package.                                                | Readability, single responsibility, testability                  |
 | 6   | **`workspace:*`** only for internal package refs; **`catalog:`** for app/root deps (versions in `pnpm-workspace.yaml`); real semver ONLY in the published library. | Avoid version mismatch + keep the published library installable  |
 | 7   | **NEVER** introduce Inter, Plus Jakarta Sans, Space Grotesk, gradient-text, or raw Tailwind color utilities (`bg-blue-500`, etc.) in `apps/mapkit-cn`.             | The pinned Apple / Modern-Minimal design discipline forbids them |
