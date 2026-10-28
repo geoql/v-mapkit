@@ -18,6 +18,35 @@
 - add support for `nvm` ([55dfe11](https://github.com/geoql/v-mapkit/commit/55dfe1142f02ae684b0cc70f1f0f6113268abb89))
 - update `.vscode` setting(s) ([d318b05](https://github.com/geoql/v-mapkit/commit/d318b0582e3bcd020d8025e58aa48f6eebf1bbee))
 
+## [1.0.1](https://github.com/geoql/v-mapkit/compare/v1.0.0...v1.0.1) (2026-10-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** replace deprecated lucide-vue-next with @lucide/vue
+
+### Bug Fixes
+
+* **deps:** replace deprecated lucide-vue-next with @lucide/vue ([f527081](https://github.com/geoql/v-mapkit/commit/f52708131037908a2a61a95e387b497a7fe890a1))
+* run pre-commit vp from the library package ([7275351](https://github.com/geoql/v-mapkit/commit/7275351da8aeb6220aa9c3d35f9b1330088f9d46))
+
+
+### Miscellaneous
+
+* **deps:** bump dependencies to latest patch/minor ([09b30f6](https://github.com/geoql/v-mapkit/commit/09b30f6d02902f20ef4ad36e069fce5a0c7b4787))
+* **deps:** bump dependencies to latest patch/minor ([eceefac](https://github.com/geoql/v-mapkit/commit/eceefac9e864ce247aef7f82b4ed81dc78e6fcfe))
+* **deps:** latest dependencies, node 26 and pnpm 12.15.0 ([c4ed0b7](https://github.com/geoql/v-mapkit/commit/c4ed0b7e34eba71646b3e2aecdecf1efc84f3bce))
+* move the docs to a cloudflare worker, add trackers, node 26 and latest deps ([a969ef1](https://github.com/geoql/v-mapkit/commit/a969ef123224ed07adf42b39a318344bcc600941))
+* release 1.0.1 ([6ba6485](https://github.com/geoql/v-mapkit/commit/6ba64858647412ac1231e89145dcfa56a031d954))
+* release 1.0.1 ([8ca0d03](https://github.com/geoql/v-mapkit/commit/8ca0d03a99c1c27840ee265b914830e4f7808fe3))
+* remove private repo reference from docs AGENTS.md ([57ba290](https://github.com/geoql/v-mapkit/commit/57ba2908690ea02f64f2b01804d6146baf5dda13))
+* remove private repo reference from docs AGENTS.md ([5bd850a](https://github.com/geoql/v-mapkit/commit/5bd850ad73edfe6f4782c5c643e8d5f52f0dbd14))
+
+
+### Code Refactoring
+
+* **docs:** kebab-case composable filenames + align AGENTS.md ([d473faf](https://github.com/geoql/v-mapkit/commit/d473fafbce5bd4ac145ad3e3ca5951a726aa7ecb))
+
 ## [1.0.0](https://github.com/geoql/v-mapkit/compare/v0.3.0...v1.0.0) (2026-06-12)
 
 
