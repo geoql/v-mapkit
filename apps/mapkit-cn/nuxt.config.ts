@@ -10,15 +10,29 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     '@nuxtjs/tailwindcss',
-    [
-      '@nuxtjs/plausible',
-      {
-        domain: 'mapkit-cn.geoql.in',
-        apiHost: 'https://analytics.geoql.in',
-        autoOutboundTracking: true,
-      },
-    ],
+    // GA4 through useScriptGoogleAnalytics (app/plugins/google-analytics.client.ts).
+    // Plausible loads from app/plugins/plausible.client.ts, not a module: the
+    // pa-*.js tracker needs the official init snippet, which neither
+    // @nuxtjs/plausible nor the @nuxt/scripts Plausible helper runs.
+    '@nuxt/scripts',
+    // OpenPanel product analytics (self-hosted at events.geoql.in). Client-side
+    // only, so no client secret.
+    '@openpanel/nuxt',
   ],
+
+  openpanel: {
+    // Public client ID of the mapkit-cn.geoql.in project (NUXT_PUBLIC_OPENPANEL_CLIENT_ID).
+    clientId:
+      process.env.NUXT_PUBLIC_OPENPANEL_CLIENT_ID ??
+      '789cf47e-a3d7-4b3c-953a-a682e9a6eda7',
+    apiUrl: 'https://events.geoql.in/api',
+    trackScreenViews: true,
+    trackOutgoingLinks: true,
+    trackAttributes: true,
+    // A proxy handler hardcodes api.openpanel.dev and would bypass the
+    // self-hosted apiUrl; direct client POST is correct here.
+    proxy: false,
+  },
 
   devtools: { enabled: true },
 
@@ -73,6 +87,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       mapkitToken: '',
+      // Public analytics IDs (they ship in the HTML, so they are not secrets).
+      // Each is overridable with its NUXT_PUBLIC_* env. An empty gtagId skips GA4.
+      gtagId: '',
+      plausibleScriptId: 'pa-5HsI0uYlxXCDS_5-ikuLA',
+      plausibleApiHost: 'https://analytics.geoql.in',
       library: {
         version: libraryPkg.version,
       },
