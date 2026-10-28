@@ -6,7 +6,7 @@
 [![JSR](https://jsr.io/badges/@geoql/v-mapkit)](https://jsr.io/@geoql/v-mapkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Docs:** [v-mapkit.geoql.in](https://v-mapkit.geoql.in) · **Live examples:** [mapkit-cn.geoql.in](https://mapkit-cn.geoql.in)
+**[Live examples](https://mapkit-cn.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit)** · [Docs](https://v-mapkit.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) · [npm](https://www.npmjs.com/package/@geoql/v-mapkit) · [JSR](https://jsr.io/@geoql/v-mapkit)
 
 ## Packages
 
@@ -98,6 +98,17 @@ v-mapkit/
 ├── pnpm-workspace.yaml      # Workspace config
 └── pnpm-lock.yaml
 ```
+
+## More from the author
+
+- [v-maplibre](https://v-maplibre.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — 50+ Vue 3 components for MapLibre GL
+- [mapcn-vue](https://mapcn-vue.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — shadcn-vue map components you copy into your app
+- [maplibre-gl-compare](https://maplibre-gl-compare.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — swipe-style map comparison control for MapLibre
+- [maplibre-gl-wind](https://maplibre-gl-wind.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — wind particle animation layer for MapLibre
+- [nxui](https://nxui.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — animated copy-paste UI components for Vue 3 and Nuxt
+- [shadscan-vue](https://shadscan-vue.geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) — UI audits for shadcn-vue and shadcn-nuxt apps
+
+See every project at [vinayakkulkarni.dev/projects](https://vinayakkulkarni.dev/projects?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit) and [geoql.in](https://geoql.in/?utm_source=github&utm_medium=readme&utm_campaign=v-mapkit).
 
 ## License
 
