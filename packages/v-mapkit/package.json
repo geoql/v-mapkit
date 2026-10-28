@@ -71,7 +71,7 @@
     "@vue/test-utils": "^2.5.1",
     "@vue/tsconfig": "^0.9.1",
     "happy-dom": "^21.0.4",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "unplugin-vue": "^8.0.0",
     "vite-plus": "^1.4.0",
     "vitest": "^5.0.5",
