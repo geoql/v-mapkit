@@ -13,10 +13,13 @@
     "typecheck": "nuxt typecheck",
     "lint": "oxlint && eslint .",
     "lint:fix": "oxlint --fix && eslint . --fix",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vp test run tests"
   },
   "dependencies": {
     "@geoql/v-mapkit": "workspace:*",
+    "@nuxt/scripts": "catalog:app:mapkit-cn",
+    "@openpanel/nuxt": "catalog:app:mapkit-cn",
     "@vueuse/core": "catalog:app:mapkit-cn",
     "@vueuse/nuxt": "catalog:app:mapkit-cn",
     "class-variance-authority": "catalog:app:mapkit-cn",
@@ -36,7 +39,6 @@
     "@nuxt/fonts": "catalog:app:mapkit-cn",
     "@nuxt/icon": "catalog:app:mapkit-cn",
     "@nuxtjs/color-mode": "catalog:app:mapkit-cn",
-    "@nuxtjs/plausible": "catalog:app:mapkit-cn",
     "@nuxtjs/tailwindcss": "catalog:app:mapkit-cn",
     "@resvg/resvg-wasm": "catalog:app:mapkit-cn",
     "@tailwindcss/typography": "catalog:app:mapkit-cn",
@@ -50,6 +52,7 @@
     "shadcn-nuxt": "catalog:app:mapkit-cn",
     "tailwindcss": "catalog:app:mapkit-cn",
     "typescript": "catalog:app:mapkit-cn",
+    "vite-plus": "catalog:",
     "vue": "catalog:app:mapkit-cn",
     "vue-tsc": "catalog:app:mapkit-cn",
     "wrangler": "catalog:default"

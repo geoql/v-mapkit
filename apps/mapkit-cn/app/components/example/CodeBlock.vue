@@ -19,6 +19,13 @@
   );
 
   const { copy, copied } = useClipboard({ copiedDuring: 1600 });
+  const { track } = useAnalytics();
+  const route = useRoute();
+
+  function copyCode(): void {
+    copy(trimmed.value);
+    track('code_copied', { language: props.language, page: route.path });
+  }
 </script>
 
 <template>
@@ -38,7 +45,7 @@
         type="button"
         class="flex items-center gap-1.5 rounded-md px-2 py-1 font-mono text-xs text-muted-foreground transition-colors duration-200 hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         :aria-label="copied ? 'Copied' : 'Copy code'"
-        @click="copy(trimmed)"
+        @click="copyCode"
       >
         <Icon
           :name="copied ? 'lucide:check' : 'lucide:copy'"

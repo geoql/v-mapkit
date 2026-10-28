@@ -27,6 +27,18 @@
   });
 
   const { copy, copied } = useClipboard({ source: command });
+  const { track } = useAnalytics();
+  const route = useRoute();
+
+  function copyCommand(): void {
+    copy(command.value);
+    track('install_command_copied', {
+      packageManager: selected.value,
+      kind: props.registry ? 'registry' : 'package',
+      registry: props.registry,
+      page: route.path,
+    });
+  }
 </script>
 
 <template>
@@ -60,7 +72,7 @@
         type="button"
         class="grid size-7 shrink-0 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
         :aria-label="copied ? 'Copied' : 'Copy command'"
-        @click="copy(command)"
+        @click="copyCommand"
       >
         <Icon
           :name="copied ? 'lucide:check' : 'lucide:copy'"

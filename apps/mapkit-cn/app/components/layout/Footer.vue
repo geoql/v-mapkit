@@ -31,7 +31,7 @@
         },
         {
           label: 'npm',
-          href: 'https://www.npmjs.com/package/v-mapkit',
+          href: 'https://www.npmjs.com/package/@geoql/v-mapkit',
         },
       ],
     },
