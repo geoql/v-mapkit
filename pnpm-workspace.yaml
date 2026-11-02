@@ -82,7 +82,7 @@ catalogs:
     "@nuxt/scripts": ^1.3.12
     "@openpanel/nuxt": ^0.4.2
     "@types/apple-mapkit-js-browser": ^5.78.1
-    "@iconify-json/lucide": ^1.2.147
+    "@iconify-json/lucide": ^1.2.149
     "@iconify-json/simple-icons": ^1.2.101
     "@nuxt/eslint": ^1.17.0
     "@nuxt/eslint-config": ^1.17.0
